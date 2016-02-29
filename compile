@@ -1,0 +1,3 @@
+#!/bin/sh
+
+browserify lib/client.js -o runtime/worker.js
