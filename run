@@ -1,3 +1,15 @@
 #!/bin/sh
 
-./compile && node index.js 
+if [ "$1"x = "x" ]; then
+	echo "Usage:"
+	echo "$0 [type]"
+	echo "Where type is one of:"
+	echo "	test		Run the simple marshal test"
+	echo "	test2		Run the complex thread text"
+	echo "	index		Run index (doesnt do much)"
+	exit 1
+fi
+
+target="$1.js"
+
+./compile && node $target

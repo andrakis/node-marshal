@@ -19,10 +19,11 @@
   },
   "main": "index.html",
   "dependencies": {
-    "buffer": "^4.5.0",
+    "buffer": "^4.5.0"
+  },
+  "devDependencies": {
     "webworker-threads": "^0.6.2"
   },
-  "devDependencies": {},
   "scripts": {},
   "engines": {
     "node": ">= 5.0.0"
