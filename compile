@@ -1,3 +1,9 @@
 #!/bin/sh
 
-browserify lib/client.js -o runtime/worker.js
+which browserify > /dev/null
+if [ "$?" = "1" ]; then
+	echo "Browserify not found. Please install from npm via:"
+	echo "npm install -g browserify"
+	exit 1
+fi
+browserify "lib/client.js" -o "runtime/worker.js"
