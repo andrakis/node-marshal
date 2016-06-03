@@ -11,5 +11,8 @@ if [ "$1"x = "x" ]; then
 fi
 
 target="$1.js"
+if [ "$1" != "index" ]; then
+	target="test/$target"
+fi
 
 ./compile && node $target

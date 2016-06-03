@@ -2,8 +2,8 @@
 
 var Worker = require('webworker-threads').Worker;
 var util = require('util');
-var server = require('./lib/server');
-var workerPath = __dirname + '/runtime/worker.js';
+var server = require('../lib/server');
+var workerPath = __dirname + '/../runtime/worker.js';
 
 // Start worker
 var worker = new Worker(workerPath);

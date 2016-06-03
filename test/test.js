@@ -1,5 +1,5 @@
-var server = require('./lib/server');
-var shared = require('./lib/shared');
+var server = require('../lib/server');
+var shared = require('../lib/shared');
 var Buffer = require('buffer').Buffer;
 
 var serialized = shared.Serialize(new Buffer(01));

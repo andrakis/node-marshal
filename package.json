@@ -1,28 +1,26 @@
 {
-  "name": "jorconsole",
+  "name": "marshal",
   "version": "0.0.1",
-  "description": "Run a Virtual Machine using Jor1k as the platform",
+  "description": "Provides marshalling of data and function calls between a web worker thread and parent",
   "contributors": [],
   "keywords": [
-    "or1k",
-    "emulation",
-    "virtual machine"
+    "marshal"
   ],
-  "author": "Julian Thatcher",
+  "author": "andrakis",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/andrakis/jorconsole/issues"
+    "url": "https://github.com/andrakis/node-marshal/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/andrakis/jorconsole.git"
+    "url": "git://github.com/andrakis/node-marshal.git"
   },
-  "main": "index.html",
+  "main": "index.js",
   "dependencies": {
-    "buffer": "^4.5.0"
+    "buffer": "^4.5.0",
+    "webworker-threads": "^0.6.2"
   },
   "devDependencies": {
-    "webworker-threads": "^0.6.2"
   },
   "scripts": {},
   "engines": {
