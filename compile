@@ -6,4 +6,4 @@ if [ "$?" = "1" ]; then
 	echo "npm install -g browserify"
 	exit 1
 fi
-browserify "lib/client_start.js" "lib/client.js" -o "runtime/worker.js"
+browserify "lib/client.js" "lib/client_demo.js" -o "runtime/worker.js"
