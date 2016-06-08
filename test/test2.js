@@ -8,7 +8,7 @@ var workerPath = __dirname + '/../runtime/worker.js';
 // Start worker
 var worker = new Worker(workerPath);
 worker.onmessage = function(event) {
-	console.log("Received: " + util.inspect(event));
+	//console.log("Received: " + util.inspect(event));
 	try {
 		var cmd = JSON.parse(event.data);
 		if(cmd.marshal) {

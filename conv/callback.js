@@ -7,10 +7,16 @@ var Converter = shared.Converter;
 
 var _callback_counter = 0;
 var _callbacks = {};
+
+var _do_not_clear_list = {};
+var _do_not_clear = false;
+
 function Callback(cb) {
 	this.id = ++_callback_counter;
 	this.cb = cb;
 	_callbacks[this.id] = this.cb;
+	if(_do_not_clear)
+		_do_not_clear_list[this.id] = true;
 }
 
 exports.Callback = Callback;
@@ -39,5 +45,10 @@ exports.GetCallback = function(id) {
 };
 
 exports.ClearCallback = function(id) {
-	delete _callbacks[id];
+	if(!_do_not_clear_list[id])
+		delete _callbacks[id];
+};
+
+exports.SetDoNotClear = function(should_do_not_clear) {
+	_do_not_clear = should_do_not_clear;
 };
