@@ -17,8 +17,7 @@
   },
   "main": "index.js",
   "dependencies": {
-    "buffer": "^4.5.0",
-    "webworker-threads": "^0.6.2"
+    "buffer": "^4.5.0"
   },
   "devDependencies": {
   },
